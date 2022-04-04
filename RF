@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main()
+{
+    int fs(int x);
+    int a;
+    printf("Selecione qual casa da sequencia de fibonacci deseja ver:\n");
+    scanf("%d",&a);
+    a=fs(a);
+    printf("\nO  numero em questao e:%d",a );
+    return 0;
+}
+
+int fs(int x)
+{
+    int b;
+    if (x==-1 || x==0)
+        return 0;
+    if(x==1)
+        return 1;
+    else
+    {
+        /*f(n)= f(n-1) + f(n=-2)*/
+        b=fs(x-1)+fs(x-2);
+    }
+    return b;
+
+    
+
+}
